@@ -1,0 +1,19 @@
+
+# Abrir o arquivo para leitura
+arquivo = open("Python_07_nobody.txt", "r")
+
+# Ler todo o conteúdo do arquivo
+texto = arquivo.read()
+
+# Fechar o arquivo
+arquivo.close()
+
+# Procurar a primeira ocorrência de Nobody
+posicao = texto.find("Nobody")
+
+# Repetir enquanto a palavra for encontrada
+while posicao != -1:
+    print(posicao)
+
+    # Procurar a próxima ocorrência
+    posicao = texto.find("Nobody", posicao + 1)
